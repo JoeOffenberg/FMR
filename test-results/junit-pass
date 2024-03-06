@@ -1,1 +1,30 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" name="com.howtodoinjava.junit5.examples.xmlReport.HelloTest" 
+	skipped="0" tests="12" time="0.776" version="3.0">
+	<properties>
+		<property name="java.specification.version" value="17"/>
+		<property name="sun.cpu.isalist" value="amd64"/>
+		<property name="sun.jnu.encoding" value="Cp1252"/>
+		<property name="java.class.path" value="..."/>
+		<property name="java.vm.vendor" value="Oracle Corporation"/>
+		...
+	</properties>
+	<testcase classname="com.howtodoinjava.junit5.examples.xmlReport.HelloTest1" name="test1" time="0.04"/>
+	<testcase classname="com.howtodoinjava.junit5.examples.xmlReport.HelloTest2" name="test2" time="0.04"/>
+	<testcase classname="com.howtodoinjava.junit5.examples.xmlReport.HelloTest3" name="test3" time="0.04"/>
+	<testcase classname="com.howtodoinjava.junit5.examples.xmlReport.HelloTest4" name="test4" time="0.04"/>
+	<testcase classname="com.howtodoinjava.junit5.examples.xmlReport.HelloTest5" name="test5" time="0.04"/>
+	<testcase classname="com.howtodoinjava.junit5.examples.xmlReport.HelloTest6" name="test6" time="0.04"/>
+	<testcase classname="com.howtodoinjava.junit5.examples.xmlReport.HelloTest7" name="test7" time="0.04"/>
+	<testcase classname="com.howtodoinjava.junit5.examples.xmlReport.HelloTest8" name="test8" time="0.04"/>
+	<testcase classname="com.howtodoinjava.junit5.examples.xmlReport.HelloTest9" name="test9" time="0.04"/>
+	<testcase classname="com.howtodoinjava.junit5.examples.xmlReport.HelloTest10" name="test10" time="0.04"/>
+	<testcase classname="com.howtodoinjava.junit5.examples.xmlReport.HelloTest11" name="test11" time="0.04"/>
+	<testcase classname="com.howtodoinjava.junit5.examples.xmlReport.HelloTest12" name="test12" time="0.04"/>
+  <!-- <testcase classname="com.howtodoinjava.junit5.examples.xmlReport.HelloTest13" name="test13" time="0.008">
+	<failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError">
+			<![CDATA[org.opentest4j.AssertionFailedError: expected: <true>but was: <false>at 
+			org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)...]]>
+		</failure>  
+	</testcase> -->
+</testsuite>
