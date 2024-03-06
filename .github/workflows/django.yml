@@ -85,7 +85,7 @@ jobs:
     
   publish-tests:
     runs-on: ubuntu-latest
-    needs: [registerartifact]
+    # needs: [registerartifact]
     steps:
     - name: set test variables
       run: |
