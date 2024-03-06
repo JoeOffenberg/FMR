@@ -81,7 +81,7 @@ jobs:
           artifacts: '[{"name": "fmr","version": "0.9.${{ github.run_number }}","semanticVersion": "0.9.${{ github.run_number }}","repositoryName": "${{ github.repository }}"}]'
 
   
-  publish-tests-p:
+  publish-tests:
  #   if: endsWith(github.run_number,0)||endsWith(github.run_number,2)||endsWith(github.run_number,4)||endsWith(github.run_number,6)||endsWith(github.run_number,8)
     runs-on: ubuntu-latest
     needs: [registerartifact]
