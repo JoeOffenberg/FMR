@@ -110,9 +110,9 @@ jobs:
     - name: ServiceNow DevOps Unit Test Results
       uses: ServiceNow/servicenow-devops-test-report@v3.1.0
       with:
-       devops-integration-token: ${{ secrets.SN_DEVOPS_TOKEN }}
-       instance-url: ${{ secrets.SN_INSTANCE_URL }}
-       tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
+        devops-integration-token: ${{ secrets.SN_DEVOPS_TOKEN }}
+        instance-url: ${{ secrets.SN_INSTANCE_URL }}
+        tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
         context-github: ${{ toJSON(github) }}
         job-name: 'publish-tests'
         xml-report-filename: ./test-results/junit-pass.xml
