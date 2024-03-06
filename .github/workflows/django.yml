@@ -92,7 +92,7 @@ jobs:
             if [ `expr ${{ github.run_number }} % 2` == 0 ] |then  
                echo TEST_RESULT=pass>>$GITHUB_OUTPUT;
             else 
-               echo TEST_RESULT=pass>>$GITHUB_OUTPUT;
+               echo TEST_RESULT=fail>>$GITHUB_OUTPUT;
             fi
       id: settestvar
         
@@ -105,10 +105,10 @@ jobs:
         tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
         context-github: ${{ toJSON(github) }}
         job-name: 'publish-tests'
-        xml-report-filename: ./test-results/junit-${{ steps.settestvar.outputs.TEST_RESULT }}
+        xml-report-filename: ./test-results/junit-${{ steps.settestvar.outputs.TEST_RESULT }}.xml
     - name: Publish Test Results
       uses: EnricoMi/publish-unit-test-result-action@v2
       with:
         files: |
-          ./test-results/junit-pass.xml
+          ./test-results/junit-${{ steps.settestvar.outputs.TEST_RESULT }}.xml
 
