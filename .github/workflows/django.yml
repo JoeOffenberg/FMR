@@ -1,4 +1,4 @@
-name: Django CI FMR build artifact 
+name: build Django CI FMR artifact 
 
 on:
 #  push:
