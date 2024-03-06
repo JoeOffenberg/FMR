@@ -80,10 +80,17 @@ jobs:
           job-name: 'Register Artifact'
           artifacts: '[{"name": "fmr","version": "0.9.${{ github.run_number }}","semanticVersion": "0.9.${{ github.run_number }}","repositoryName": "${{ github.repository }}"}]'
 
+  
+  
+    
   publish-tests:
     runs-on: ubuntu-latest
     needs: [registerartifact]
     steps:
+    - name: set test variables
+      run: |
+         if [ `expr ${{ github.run_number }} % 2` == 0 ] then echo  ::set-env name=TEST_RESULT::pass; else echo ::set-env name=TEST_RESULT::fail; fi
+      
     - uses: actions/checkout@v3
     - name: ServiceNow DevOps Unit Test Results
       uses: ServiceNow/servicenow-devops-test-report@v3.1.0
@@ -93,7 +100,7 @@ jobs:
         tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
         context-github: ${{ toJSON(github) }}
         job-name: 'publish-tests'
-        xml-report-filename: ./test-results/junit-pass.xml
+        xml-report-filename: ./test-results/junit-$TEST_RESULT.xml
     - name: Publish Test Results
       uses: EnricoMi/publish-unit-test-result-action@v2
       with:
