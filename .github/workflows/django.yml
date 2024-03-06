@@ -94,7 +94,7 @@ jobs:
          tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
          context-github: ${{ toJSON(github) }}
          job-name: 'publish-tests'
-         xml-report-filename: ./test-results/junit.xml
+         xml-report-filename: ./test-results/junit-pass.xml
      - name: Publish Test Results
        uses: EnricoMi/publish-unit-test-result-action@v2
        if: always()
