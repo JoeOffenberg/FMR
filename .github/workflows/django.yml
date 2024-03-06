@@ -122,4 +122,4 @@ jobs:
       if: always()
       with:
         files: |
-          ./test-results/junit-pass.xml
+          ./test-results/junit-fail.xml
