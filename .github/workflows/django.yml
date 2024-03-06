@@ -81,23 +81,45 @@ jobs:
           artifacts: '[{"name": "fmr","version": "0.9.${{ github.run_number }}","semanticVersion": "0.9.${{ github.run_number }}","repositoryName": "${{ github.repository }}"}]'
 
   
-  publish-tests:
-     runs-on: ubuntu-latest
-     needs: [registerartifact, sonarqube]
-     steps:
-     - uses: actions/checkout@v3
-     - name: ServiceNow DevOps Unit Test Results
-       uses: ServiceNow/servicenow-devops-test-report@v3.1.0
-       with:
-         devops-integration-token: ${{ secrets.SN_DEVOPS_TOKEN }}
-         instance-url: ${{ secrets.SN_INSTANCE_URL }}
-         tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
-         context-github: ${{ toJSON(github) }}
-         job-name: 'publish-tests'
-         xml-report-filename: ./test-results/junit-pass.xml
-     - name: Publish Test Results
-       uses: EnricoMi/publish-unit-test-result-action@v2
-       if: always()
-       with:
-         files: |
-           ./test-results/junit.xml
+  publish-tests-p:
+    if: endsWith(github.run_number,0)||endsWith(github.run_number,2)||endsWith(github.run_number,4)||endsWith(github.run_number,6)||endsWith(github.run_number,8)
+    runs-on: ubuntu-latest
+    needs: [registerartifact, sonarqube]
+    steps:
+    - uses: actions/checkout@v3
+    - name: ServiceNow DevOps Unit Test Results
+      uses: ServiceNow/servicenow-devops-test-report@v3.1.0
+      with:
+        devops-integration-token: ${{ secrets.SN_DEVOPS_TOKEN }}
+        instance-url: ${{ secrets.SN_INSTANCE_URL }}
+        tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
+        context-github: ${{ toJSON(github) }}
+        job-name: 'publish-tests'
+        xml-report-filename: ./test-results/junit-pass.xml
+    - name: Publish Test Results
+      uses: EnricoMi/publish-unit-test-result-action@v2
+      if: always()
+      with:
+        files: |
+          ./test-results/junit-pass.xml
+  publish-tests-f:
+    if: endsWith(github.run_number,1)||endsWith(github.run_number,3)||endsWith(github.run_number,5)||endsWith(github.run_number,7)||endsWith(github.run_number,9)
+    runs-on: ubuntu-latest
+    needs: [registerartifact, sonarqube]
+    steps:
+    - uses: actions/checkout@v3
+    - name: ServiceNow DevOps Unit Test Results
+      uses: ServiceNow/servicenow-devops-test-report@v3.1.0
+      with:
+        devops-integration-token: ${{ secrets.SN_DEVOPS_TOKEN }}
+        instance-url: ${{ secrets.SN_INSTANCE_URL }}
+        tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
+        context-github: ${{ toJSON(github) }}
+        job-name: 'publish-tests'
+        xml-report-filename: ./test-results/junit-pass.xml
+    - name: Publish Test Results
+      uses: EnricoMi/publish-unit-test-result-action@v2
+      if: always()
+      with:
+        files: |
+          ./test-results/junit-pass.xml
