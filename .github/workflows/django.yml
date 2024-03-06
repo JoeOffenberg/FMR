@@ -90,9 +90,9 @@ jobs:
     - name: set test variables
       run: |
             if [ `expr ${{ github.run_number }} % 2` == 0 ] then  
-               echo TEST_RESULT=pass>>$GITHUB_OUTPUT;
+               echo TEST_RESULT=pass>>$GITHUB_OUTPUT
             else 
-               echo TEST_RESULT=fail>>$GITHUB_OUTPUT;
+               echo TEST_RESULT=fail>>$GITHUB_OUTPUT
             fi
       id: settestvar
         
