@@ -78,7 +78,7 @@ jobs:
           tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
           context-github: ${{ toJSON(github) }}
           job-name: 'Register Artifact'
-          artifacts: '[{"name": "fmr","version": "2.0.2.${{ github.run_number }}","semanticVersion": "2.0.2.${{ github.run_number }}","repositoryName": "${{ github.repository }}"}]'
+          artifacts: '[{"name": "fmr","version": "2.2.${{ github.run_number }}","semanticVersion": "2.2.${{ github.run_number }}","repositoryName": "${{ github.repository }}"}]'
 
   
   
