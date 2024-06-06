@@ -27,6 +27,7 @@ A loan management application built with Django, SQLite3, JavaScript, HTML, CSS,
 2. Admins approve or reject loan requests in the admin dashboard.
 3. Customers can make monthly loan payments through the application.
 4. Both customers and admins have dashboards for efficient management.
+5. New comments
 
 ## Contributing
 
