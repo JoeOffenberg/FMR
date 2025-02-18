@@ -34,7 +34,7 @@ jobs:
     - name: Zip artifact for deployment
       run: zip release_${{ matrix.python-version }}.zip static/* -r
     - name: Upload artifact for deployment jobs
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4.6.0
       with:
         name: fmr-app_${{ matrix.python-version }}
         path: |
