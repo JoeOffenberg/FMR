@@ -22,6 +22,7 @@ A loan management application built with Django, SQLite3, JavaScript, HTML, CSS,
 3. Configure the database settings in the environment variables.
 4. Run the development server: `python manage.py runserver`.
 
+
 ## Usage
 
 1. Register as a customer to request loans.
