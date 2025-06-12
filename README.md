@@ -33,7 +33,6 @@ A loan management application built with Django, SQLite3, JavaScript, HTML, CSS,
 
 ## Contributing
 
-Joe Offenberg
 
 
 
