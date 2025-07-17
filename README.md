@@ -47,3 +47,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 Simplify loan management with our application. Register, request, and pay loans effortlessly. Admins, track requests and manage approvals seamlessly. 
 The best you can get for the money!
+blah blah blah
