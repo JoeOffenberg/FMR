@@ -42,7 +42,7 @@ Contributions are welcome! Please open pull requests or issues.
 
 This project is licensed under the [MIT License](LICENSE).
 
----
+--- blah blah
 
 
 Simplify loan management with our application. Register, request, and pay loans effortlessly. Admins, track requests and manage approvals seamlessly. 
