@@ -47,7 +47,7 @@ jobs:
     needs: build
     steps:
       - name: ServiceNow Register Package
-        uses: ServiceNow/servicenow-devops-register-package@v6.1.0
+        uses: ServiceNow/servicenow-devops-register-package@v5.1.0
         with:
           devops-integration-token: ${{ secrets.SN_DEVOPS_TOKEN }}
           instance-url: ${{ secrets.SN_INSTANCE_URL }}
@@ -66,7 +66,7 @@ jobs:
     name: 'ServiceNow DevOps Change'
     steps:
       - name: ServiceNow Change
-        uses: ServiceNow/servicenow-devops-change@v3.0.0
+        uses: ServiceNow/servicenow-devops-change@v6.1.0
         with:
           # Devops Integration Token
           devops-integration-token: ${{ secrets.SN_DEVOPS_TOKEN }}
@@ -101,4 +101,5 @@ jobs:
           app-name: 'fmr-prd'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7876106591744B918B571FCE5E6E76B0 }}
+
 
