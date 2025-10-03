@@ -19,7 +19,7 @@ pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pycodestyle==2.7.0
 pylint==2.6.0
-python-decouple==3.4
+python-decouple==3.8
 pytz==2020.5
 six==1.16.0
 sqlparse==0.4.1
